@@ -1,0 +1,90 @@
+aside {
+    margin: 0 auto;
+    position: relative;
+    background: whitesmoke;
+    min-height: 100vh;
+    padding: 50px;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        height: 2px;
+        width: 100%;
+        background: rgb(217, 217, 217);
+        transform: translateX(-3.95%);
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        height: 100%;
+        width: 2px;
+        background: rgb(217, 217, 217);
+    }
+    .leftaside-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 45%;
+    }
+    .rightaside-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 45%;
+    }
+    .imaside-container {
+        width: 100%;
+        overflow: hidden;
+        img {
+            width: 100%;
+            opacity: 0;
+        }
+        #pic02 {
+            position: relative;
+            left: -600px;
+            transition: opacity 1s , transform 3s;
+        }
+        #pic03 {
+            position: relative;
+            right: -600px;
+            transition: opacity 1s , transform 3s;
+        }
+        .animate {
+            transform: translateX(600px);
+            opacity: 1;
+        }
+        .animate2 {
+            transform: translateX(-600px);
+            opacity: 1;
+        }
+    }
+    .dateaside {
+        font-size: 0.8rem;
+    }
+    h3 {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        font-family: $font1;
+        letter-spacing: 2px;
+        line-height: 2;
+        text-align: center;
+        width: 45%;
+        margin: 30px auto;
+    }
+    #lorem {
+        font-size: 1.2rem;
+        line-height: 2;
+        margin: 30px auto;
+    }
+    .visible {
+        opacity: 1;
+    }
+}

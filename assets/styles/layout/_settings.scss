@@ -1,0 +1,85 @@
+@font-face {
+    font-family: "font1" ;
+    src: url("./assets/fonts/Inter-ExtraBold.ttf");
+};
+@font-face {
+    font-family: "font2";
+    src: url("./assets/fonts/Merriweather-Light.ttf");
+} ;
+
+$font1: "font1", sans-serif;
+$font2: "font2", sans-serif; 
+$color1: rgb(245, 245, 245);
+$color2: rgb(213, 213, 213);
+$color3: rgb(7, 7, 7);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font2;
+    scroll-behavior: smooth;
+}
+body {
+    min-height: 100vh;
+    background: url(./assets/img/bg.jpg) fixed center/cover;
+    &:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: $color3;
+        animation: animBefore 1.5s ease forwards;
+        animation-delay: 0.15s;
+    
+        @keyframes animBefore {
+          to {
+            opacity: 0;
+          }
+        }
+    }
+    #btarrow {
+        position: absolute;
+        right: 90px;
+        top: 3500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        width: 60px;
+        height: 60px;
+        border: 2px solid $color1;
+        border-radius: 50%;
+        text-decoration: none;
+        a {
+            color: $color1;
+        }
+    }
+}
+li {
+    list-style-type: none;
+}
+button {
+    opacity: 0;
+    transition: 1s;
+    background: none;
+    font-family: $font1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    margin : 20px auto;
+    padding: 5px;
+    width: 30%;
+    height: 45px;
+    border: 2px solid $color3;
+    border-radius: 2px;
+    cursor: pointer;
+    -webkit-box-shadow: 5px 4px 11px 2px rgba(0,0,0,0.74); 
+    box-shadow: 5px 4px 11px 2px rgba(0,0,0,0.74);
+    &:hover{
+        transform: scale(1.05);
+    }
+}
+
