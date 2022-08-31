@@ -47,3 +47,27 @@ header {
         }
     }
 }
+
+@media screen and (max-width: 1340px) {
+    header {
+        .header-content {
+            p {
+                font-size: 1.15rem;
+            }
+        }
+    }
+    
+}
+@media screen and (max-width: 1000px) {
+    header {
+        .header-content {
+            h1 {
+                font-size: 3.5rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+    
+}

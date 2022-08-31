@@ -41,24 +41,6 @@ body:before {
     opacity: 0;
   }
 }
-body #btarrow {
-  position: absolute;
-  right: 5%;
-  top: 425%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  width: 60px;
-  height: 60px;
-  border: 2px solid rgb(245, 245, 245);
-  border-radius: 50%;
-  text-decoration: none;
-  opacity: 0.8;
-}
-body #btarrow a {
-  color: rgb(245, 245, 245);
-}
 
 li {
   list-style-type: none;
@@ -140,6 +122,19 @@ header .header-content #navlink:visited {
   color: rgb(245, 245, 245);
 }
 
+@media screen and (max-width: 1340px) {
+  header .header-content p {
+    font-size: 1.15rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  header .header-content h1 {
+    font-size: 3.5rem;
+  }
+  header .header-content p {
+    font-size: 1rem;
+  }
+}
 nav {
   background: rgba(255, 254, 254, 0.324);
   position: absolute;
@@ -481,6 +476,24 @@ footer:after {
   width: 2px;
   background: rgb(217, 217, 217);
 }
+footer #btarrow {
+  position: absolute;
+  right: -10%;
+  top: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  width: 60px;
+  height: 60px;
+  border: 2px solid rgb(245, 245, 245);
+  border-radius: 50%;
+  text-decoration: none;
+  opacity: 0.8;
+}
+footer #btarrow a {
+  color: rgb(245, 245, 245);
+}
 
 @media screen and (max-width: 1630px) {
   footer .rigthfooter-container div ul li {
@@ -493,23 +506,18 @@ footer:after {
   }
 }
 @media screen and (max-width: 1340px) {
-  body #btarrow {
-    top: 420%;
-  }
   footer .rigthfooter-container div p {
     width: 40%;
+    font-size: 0.8rem;
   }
   footer .rigthfooter-container div ul {
     width: 40%;
   }
   footer .rigthfooter-container div ul li {
-    margin-right: 20px;
+    margin-right: 10px;
   }
 }
 @media screen and (max-width: 1300px) {
-  body #btarrow {
-    top: 415%;
-  }
   footer .leftfooter-container form input[type=submit] {
     font-size: 0.5rem;
   }
@@ -521,5 +529,19 @@ footer:after {
   }
   footer .rigthfooter-container div li {
     margin-right: 15px;
+  }
+}
+@media screen and (max-width: 1120px) {
+  footer .rigthfooter-container div ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  footer .leftfooter-container form input[type=submit] {
+    font-size: 0.35rem;
   }
 }/*# sourceMappingURL=index.css.map */
