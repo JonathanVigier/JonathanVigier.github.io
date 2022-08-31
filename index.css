@@ -488,7 +488,7 @@ footer:after {
   }
 }
 @media screen and (max-width: 1400px) {
-  footer .leftfooter-container form [type=submit] {
+  footer .leftfooter-container form input[type=submit] {
     font-size: 0.6rem;
   }
 }
@@ -510,12 +510,12 @@ footer:after {
   body #btarrow {
     top: 415%;
   }
-  footer .leftfooter-container form [type=submit] {
+  footer .leftfooter-container form input[type=submit] {
     font-size: 0.5rem;
   }
 }
 @media screen and (max-width: 1200px) {
-  footer .leftfooter-container form [type=submit] {
+  footer .leftfooter-container form input[type=submit] {
     font-size: 0.4rem;
     height: 35px;
   }
