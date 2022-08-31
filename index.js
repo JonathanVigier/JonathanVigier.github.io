@@ -11,8 +11,6 @@ window.onload = () => {
   const asideBtn1 = asideBtn[1];
   const asideBtn2 = asideBtn[2];
 
-  console.log(window.scrollY);
-
   // Apparition de mainBtn au scroll
   window.addEventListener("scroll", () => {
     if (window.scrollY > 1240) {
