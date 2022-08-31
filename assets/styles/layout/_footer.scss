@@ -45,6 +45,7 @@ footer {
             input[type="submit"] {
                 background: none;
                 font-family: $font1;
+                font-size: 0.8rem;
                 text-transform: uppercase;
                 letter-spacing: 2px;
                 text-align: center;
@@ -158,6 +159,74 @@ footer {
                         margin-right: 40px;
                     }
                 }
+            }
+        }
+    }
+}
+@media  screen and (max-width: 1400px) {
+    footer {
+        .leftfooter-container {
+            form {
+                 [type="submit"] {
+                    font-size: 0.6rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1340px) {
+    body {
+        #btarrow {
+            top: 420%;
+        }
+    }
+    footer {
+        .rigthfooter-container {
+            div {
+                p {
+                    width: 40%;
+                }
+                ul {
+                    width: 40%;
+                    li {
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1300px) {
+    body {
+        #btarrow {
+            top: 415%;
+        }
+    }
+    footer {
+        .leftfooter-container {
+            form {
+                 [type="submit"] {
+                    font-size: 0.5rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1200px) {
+    footer {
+        .leftfooter-container {
+            form {
+                 [type="submit"] {
+                    font-size: 0.4rem;
+                    height: 35px;
+                }
+            }
+        }
+        .rigthfooter-container {
+            div {
+                li {
+                    margin-right: 15px;
+                }                
             }
         }
     }
