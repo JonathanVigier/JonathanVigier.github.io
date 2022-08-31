@@ -12,10 +12,10 @@ aside {
         content: '';
         position: absolute;
         top: 0;
+        left: 0;
         height: 2px;
         width: 100%;
         background: rgb(217, 217, 217);
-        transform: translateX(-3.95%);
     }
     &:after {
         content: '';

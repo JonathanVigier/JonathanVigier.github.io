@@ -43,8 +43,8 @@ body:before {
 }
 body #btarrow {
   position: absolute;
-  right: 90px;
-  top: 3500px;
+  right: 5%;
+  top: 425%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,6 +54,7 @@ body #btarrow {
   border: 2px solid rgb(245, 245, 245);
   border-radius: 50%;
   text-decoration: none;
+  opacity: 0.8;
 }
 body #btarrow a {
   color: rgb(245, 245, 245);
@@ -262,10 +263,10 @@ aside:before {
   content: "";
   position: absolute;
   top: 0;
+  left: 0;
   height: 2px;
   width: 100%;
   background: rgb(217, 217, 217);
-  transform: translateX(-3.95%);
 }
 aside:after {
   content: "";
@@ -448,28 +449,28 @@ footer .rigthfooter-container #rf1:before {
   content: "";
   position: absolute;
   top: 25%;
+  left: 50%;
   height: 2px;
-  width: 50%;
+  width: 49.9%;
   background: rgb(217, 217, 217);
-  transform: translateX(6%);
 }
 footer .rigthfooter-container #rf2:before {
   content: "";
   position: absolute;
   top: 50%;
+  left: 50%;
   height: 2px;
-  width: 50%;
+  width: 49.9%;
   background: rgb(217, 217, 217);
-  transform: translateX(6%);
 }
 footer .rigthfooter-container #rf3:before {
   content: "";
   position: absolute;
   top: 75%;
+  left: 50%;
   height: 2px;
-  width: 50%;
+  width: 49.9%;
   background: rgb(217, 217, 217);
-  transform: translateX(6%);
 }
 footer:after {
   content: "";
@@ -478,4 +479,10 @@ footer:after {
   height: 100%;
   width: 2px;
   background: rgb(217, 217, 217);
+}
+
+@media screen and (max-width: 1630px) {
+  footer .rigthfooter-container div ul li {
+    margin-right: 40px;
+  }
 }/*# sourceMappingURL=index.css.map */

@@ -110,10 +110,10 @@ footer {
                 content: '';
                 position: absolute;
                 top: 25%;
+                left: 50%;
                 height: 2px;
-                width: 50%;
+                width: 49.9%;
                 background: rgb(217, 217, 217);
-                transform: translateX(6%);
             }
         }
         #rf2 {
@@ -121,10 +121,10 @@ footer {
                 content: '';
                 position: absolute;
                 top: 50%;
+                left: 50%;
                 height: 2px;
-                width: 50%;
+                width: 49.9%;
                 background: rgb(217, 217, 217);
-                transform: translateX(6%);
             }
         }
         #rf3 {
@@ -132,10 +132,10 @@ footer {
                 content: '';
                 position: absolute;
                 top: 75%;
+                left: 50%;
                 height: 2px;
-                width: 50%;
+                width: 49.9%;
                 background: rgb(217, 217, 217);
-                transform: translateX(6%);
             }
         }
     }
@@ -146,5 +146,19 @@ footer {
         height: 100%;
         width: 2px;
         background: rgb(217, 217, 217);
+    }
+}
+
+@media screen and (max-width: 1630px) {
+    footer {
+        .rigthfooter-container {
+            div {
+                ul {
+                    li {
+                        margin-right: 40px;
+                    }
+                }
+            }
+        }
     }
 }

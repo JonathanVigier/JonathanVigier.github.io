@@ -42,8 +42,8 @@ body {
     }
     #btarrow {
         position: absolute;
-        right: 90px;
-        top: 3500px;
+        right: 5%;
+        top: 425%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -53,6 +53,7 @@ body {
         border: 2px solid $color1;
         border-radius: 50%;
         text-decoration: none;
+        opacity: 0.8;
         a {
             color: $color1;
         }
