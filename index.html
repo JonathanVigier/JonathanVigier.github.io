@@ -4,105 +4,251 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mountain</title>
-    <link rel="stylesheet" href="index.css"> 
-    <link rel="stylesheet" href="./assets/fontawesome/css/fontawesome.css">
-    <link rel="stylesheet" href="./assets/fontawesome/css/solid.css">
+    <title>Resto, votre restaurant gastronomique à petits prix</title>
+    <link rel="icon" href="./assets/img/favicon.png">
+    <link rel="stylesheet" href="./assets/styles/index.css">
     <link rel="stylesheet" href="./assets/fontawesome/css/brands.css">
 </head>
 <body>
+    <div id="loader">
+        <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
     <header id="header">
-        <div class="header-content">
-            <h1>the mountain wins you</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam at voluptatem impedit minima commodi id?</p>
-            <span><a href="#nav" id="navlink"><i class="fa-solid fa-arrow-down"></i></a></span>
-        </div>
-        <nav id="nav">
-            <div class="leftnav-container">
-                <ul>
-                    <li>this is massively</li>
-                    <li>generic page</li>
-                    <li>elements reference</li>
-                </ul>
-            </div>
-            <div class="rightnav-container">
-                <ul class="socialmedia">
-                    <li><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>  <!--logo twitter--> 
-                    <li><a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>  <!--logo facebook-->
-                    <li><a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>  <!--logo instagram-->
-                    <li><a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i></a></li>  <!--logo github-->
-                </ul>
-            </div>
+        <nav>
+            <div class="logo-container"><p id="logo">resto</p></div>
+            <ul id="navmenu">
+                <li>home</li>
+                <li>reservations</li>
+                <li>menu</li>
+                <li>blog</li>
+                <li>pages</li>
+                <li>shop</li>
+                <li>contact</li>
+            </ul>
+            <ul id="social">
+                <li><a href="www.facebook.com" id="fb" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="www.twitter.com" id="tw" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="www.instagram.com" id="it" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
         </nav>
+        <div class="header-content-container">
+            <div class="header-content">
+                <h2>welcome to</h2>
+                <h1>the resto</h1>
+                <span><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="./assets/img/ic-plate-big.png" alt="icon plate"></a></span>
+                <p>we serve only the freshest ingredients !</p>
+            </div> 
+        </div>     
     </header>
-    <main id="main">
-        <div id="datemain">August 23,2022</div>
-        <h2>and this a is massive headline</h2>
-        <p id="italic-lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo delectus animi nisi blanditiis incidunt quasi magnam, vitae error placeat ad corrupti, quia dolores, totam veniam.</p>
-        <div id="imgcenter-container">
-            <img src="./assets/img/pic01.jpg" alt="centered-image" id="center">
+    <section>
+        <div id="discover">
+            <div class="border">
+                <h3 class="italic">discover</h3>
+                <h2>our store</h2>
+                <span><img src="./assets/img/ic-plate.png" alt="icon plate"></span>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime exercitationem mollitia laboriosam eaque optio ut consequuntur, magnam veniam! Optio dicta voluptatibus velit, debitis eum corrupti temporibus, recusandae culpa reprehenderit est, a maxime amet itaque aliquam.</p>
+                <span id="chefspan"><img src="./assets/img/avatar-01.jpg" id="chef" alt="chefcook"></span>
+                <h3>Russel Stephens</h3>
+                <h4>chef cook</h4>
+            </div>
         </div>
-        <button id="mainbtn">full story</button>
-       
+        <div id="img01">
+            <img src="./assets/img/store-01.jpg" alt="dinner">
+        </div>
+    </section>
+    <main>
+        <h3 class="italic">discover</h3>
+        <span><img src="./assets/img/ic-plate-big.png" alt="icon plate"></span>
+        <ul class="menu">
+            <li><a href="">breakfast</a></li>
+            <li><a href="">lunch</a></li>
+            <li><a href="">dinner</a></li>
+            <li><a href="">drinks</a></li>
+            <li><a href="">other</a></li>
+        </ul>
+        <div class="dishmenu-container">
+            <div class="dishmenu">
+                <div class="dishline">
+                    <div class="dishcard left">
+                        <img src="./assets/img/dish-item-01.jpg" alt="dish">
+                        <div class="dishcardinfo">
+                            <h4 class="title">italian source mushroom</h4>
+                            <p>Mushroom / Garlic / Veggies</p>
+                        </div>
+                        <div class="price">$12</div>
+                    </div>
+                    <div class="dishcard right">
+                        <img src="./assets/img/dish-item-02.jpg" alt="dish">
+                        <div class="dishcardinfo">
+                            <h4 class="title">fried potatoes with garlic</h4>
+                            <p>Potatoes / Olive Oil / Garlic</p>
+                        </div>
+                        <div class="price">$22</div>
+                    </div>
+                </div>
+                <div class="dishline">
+                    <div class="dishcard left">
+                        <img src="./assets/img/dish-item-03.jpg" alt="dish">
+                        <div class="dishcardinfo">
+                            <h4 class="title">tenu roast source</h4>
+                            <p>Tuna / Potatoes / Rice</p>
+                        </div>
+                        <div class="price">$15</div>
+                    </div>
+                    <div class="dishcard right">
+                        <img src="./assets/img/dish-item-04.jpg" alt="dish">
+                        <div class="dishcardinfo">
+                            <h4 class="title">roast pork (4 sticks)</h4>
+                            <p>Pork / Veggies / Shoyu</p>
+                        </div>
+                        <div class="price">$18</div>
+                    </div>
+                </div>
+                <div class="dishline">
+                    <div class="dishcard left">
+                        <img src="./assets/img/dish-item-05.jpg" alt="dish">
+                        <div class="dishcardinfo">
+                            <h4 class="title">salted fried chicken</h4>
+                            <p>Chicken / Olive Oil / Salt</p>
+                        </div>
+                        <div class="price">$20</div>
+                    </div>
+                    <div class="dishcard right">
+                        <img src="./assets/img/dish-item-06.jpg" alt="dish">
+                        <div class="dishcardinfo">
+                            <h4 class="title">crab with curry sources</h4>
+                            <p>Crab / Potatoes / Rice</p>
+                        </div>
+                        <div class="price">$14</div>
+                    </div>
+                </div>
+                <div class="dishline">
+                    <div class="dishcard left">
+                        <img src="./assets/img/dish-item-07.jpg" alt="dish">
+                        <div class="dishcardinfo">
+                            <h4 class="title">imported salmon steak</h4>
+                            <p>Salmon / Veggies / Oil</p>
+                        </div>
+                        <div class="price">$16</div>
+                    </div>
+                    <div class="dishcard right">
+                        <img src="./assets/img/dish-item-08.jpg" alt="dish">
+                        <div class="dishcardinfo">
+                            <h4 class="title">baked potato pizza</h4>
+                            <p>Potato / Bread / Cheese</p>
+                        </div>
+                        <div class="price">$25</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
     <aside>
-        <div class="leftaside-container">
-            <p class="dateaside">August 24, 2022</p>
-            <h3 class="titleaside">sed magna ipsum faucibus</h3>
-            <div class="imaside-container">
-                <img src="./assets/img/pic02.jpg" alt="aside-image" id="pic02">
+        <div class="reserv-container">
+            <div class="timeinfo">
+                <div class="border">
+                    <div class="intmenu">
+                        <h3 class="italic">time</h3>
+                        <h2>open</h2>
+                        <span><img src="./assets/img/ic-plate.png" alt="icon plate"></span>
+                        <div class="schedule">
+                            <h3>monday - friday</h3>
+                            <p>7AM - 11AM (Breakfast) <br>
+                                11AM - 10PM (Lunch/Dinner)
+                            </p>
+                        </div>
+                        <div class="schedule">
+                            <h3>saturday / sunday</h3>
+                            <p>8AM - 1PM (Brunch) <br>
+                                1PM - 9PM (Lunch/Dinner)
+                            </p>
+                        </div>
+                        <div class="phone">
+                            <a href="">+15 890 979 25 52</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <p id="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quaerat facere alias a quo? Placeat enim illum consequatur corporis eius?</p>
-            <button>full story</button>
+            <div class="reservinfo">
+                <h3 class="italic">reservation</h3>
+                <h2>online booking</h2>
+                <span><img src="./assets/img/ic-plate.png" alt="icon plate"></span>
+                <form>
+                    <select name="personne" id="people">
+                        <option value="" selected disabled>Personne</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <input type="date" id="date">
+                    <input type="time" id="time">
+                    <input type="text" placeholder="Name" id="name">
+                    <input type="tel" placeholder="Phone" id="tel">
+                    <input type="email" placeholder="Email" id="mail">
+                    <input type="submit" value="BOOK NOW" id="btn">
+                </form>
+            </div>
         </div>
-        <div class="rightaside-container">
-            <p class="dateaside">August 23, 2022</p>
-            <h3 class="titleaside">primis eget imperdiet lorem</h3>
-            <div class="imaside-container">
-                <img src="./assets/img/pic03.jpg" alt="aside-image" id="pic03">
+        <div class="event-container">
+            <h3 class="italic">upcoming</h3>
+            <h2>our event</h2>
+            <span><img src="./assets/img/ic-plate.png" alt="icon plate"></span>
+            <div class="event-content">
+                <div class="eventcard" id="eventcard1">
+                    <div class="eventdate-container" id="ed1">
+                        <div class="eventdate">
+                            <h3>08</h3>
+                            <h4>july</h4>
+                        </div>
+                    </div>
+                    <div class="eventinfo">
+                        <h3>Night Inspirescu Party</h3>
+                        <p>Restaurant Resto  10:00pm - 6:00am</p>
+                        <a>buy tickets</a>
+                    </div>
+                </div>
+                <div class="eventcard" id="eventcard2">
+                    <div class="eventdate-container" id="ed2">
+                        <div class="eventdate">
+                            <h3>08</h3>
+                            <h4>july</h4>
+                        </div>
+                    </div>
+                    <div class="eventinfo">
+                        <h3>DJ RobagRuhme</h3>
+                        <p>Restaurant Resto  10:00pm - 6:00am</p>
+                        <a>buy tickets</a>
+                    </div>
+                </div>
+                <div class="event_card" id="eventcard3">
+                    <div class="container">
+                        <div class="eventdate">
+                            <h3>08</h3>
+                            <h4>july</h4>
+                        </div>
+                        <div class="eventinfo">
+                            <h3>Thousands celebrities at Johnnie Night</h3>
+                            <p>Restaurant Resto  10:00pm - 6:00am</p>
+                            <a>buy tickets</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p id="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quaerat facere alias a quo? Placeat enim illum consequatur corporis eius?</p>
-            <button>full story</button>
+        </div>
+        <div class="headchef-container">
+            <div class="headchef-comments">
+                <div class="imgcontainer">
+                    <img src="./assets/img/avatar-02.jpg" alt="headchef picture">
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae voluptatum reiciendis quaerat illum quasi animi suscipit, ut porro sit fugiat ratione recusandae ducimus nobis dolorem eveniet modi sint, odio dolore itaque autem? Accusantium hic, et non sunt voluptates molestiae corrupti?</p>
+                <h3>Russel Stephens</h3>
+                <h4>CEO - HeadPassion</h4>
+            </div>
         </div>
     </aside>
-    <footer>
-        <div class="leftfooter-container">
-            <form>
-                <label for="name">name*</label>
-                <input type="text" name="name" required>
-                <label for="mail">e-mail*</label>
-                <input type="mail" name="mail" autocomplete required>
-                <label for="message">message*</label>
-                <textarea name="message" cols="30" rows="10" required></textarea>
-                <span>* : champs obligatoire</span>
-                <input type="submit" value="SEND MESSAGE">
-            </form>
-        </div>
-        <div class="rigthfooter-container">
-            <div id="rf1">
-                <h4>address</h4>
-                <p>1234 Somewhere Road #87257 Nashville, TN 00000-0000</p>
-            </div>
-            <div id="rf2">
-                <h4>phone</h4>
-                <p>(000)000-0000</p>
-            </div>
-            <div id="rf3">
-                <h4>email</h4>
-                <p>info@untitled.ltd</p>
-            </div>
-            <div id="rf4">
-                <h4>social</h4>
-                <ul class="socialmedia">
-                    <li><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>  <!--logo twitter--> 
-                    <li><a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook-f" id="fcb"></i></a></li>  <!--logo facebook-->
-                    <li><a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>  <!--logo instagram-->
-                    <li><a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i></a></li>  <!--logo github-->
-                </ul>
-            </div>
-        </div>
-        <span id="btarrow"><a href="#header"><i class="fa-solid fa-arrow-up"></i></a></span>
-    </footer>
-    <script src="index.js"></script>
+    <script src="./index.js"></script>
 </body>
 </html>

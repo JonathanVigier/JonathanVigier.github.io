@@ -1,90 +1,550 @@
 aside {
-    margin: 0 auto;
-    position: relative;
-    background: whitesmoke;
-    min-height: 100vh;
-    padding: 50px;
-    width: 75%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 2px;
+    background: rgb(33,32,30);
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    height: 275vh;
+    width: 100%;
+    padding: 100px 0 0 0;
+    justify-items: center;
+    .reserv-container {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        width: 68%;
+        @media screen and (max-width: 630px) {
+           display: block;
+        }
+        .timeinfo {
+            user-select: none;
+            background: black;
+            padding: 30px;
+            height: 100%;
+            @media screen and (max-width: 630px) {
+                height: 50%;
+            }
+            .border {
+                border: 1px dashed $white1;
+                height: 100%;
+                .intmenu {
+                    display: grid;
+                    grid-template-rows: 70px 100px 60px 150px 150px 80px; 
+                    text-align: center;
+                    align-items: center;
+                    @media screen and (max-width: 630px) {
+                        display: block;
+                    }                  
+                    .italic {
+                        color: $gold1;
+                        font-family: $font1;
+                        font-weight: normal;
+                        font-size: 2.8rem;
+                        align-self: end;
+                        height: 40px;
+                        text-transform: lowercase;
+                        &::first-letter {
+                            text-transform: uppercase;
+                        }
+                    }
+                    h2 {
+                        color: $white1;
+                        font-family: $font2;
+                        text-transform: uppercase;
+                        letter-spacing: 3px;
+                        height: 95px;
+                        @media screen and (max-width: 630px) {
+                            height: 30px;
+                        }
+                    }
+                    span {
+                        height: 100px;
+                    }
+                    .schedule {
+                        margin: 15px 0 20px 0;
+                        @media screen and (max-width: 630px) {
+                            margin: 15px 0 0 0;
+                        }
+                        h3 {
+                            color: $gold1;
+                            font-family: $font2;
+                            font-weight: 400;
+                            letter-spacing: 2px;
+                            text-align: center;
+                            text-transform: uppercase;
+                            @media screen and (max-width: 560px) {
+                                font-size: 0.6rem;
+                            }
+                            @media screen and (max-width: 600px) {
+                                font-size: 0.8rem;
+                            }
+                        }
+                        p {
+                            color: $white1;
+                            font-family: $font3;
+                            padding: 15px;
+                            @media screen and (max-width: 560px) {
+                                font-size: 0.6rem;
+                            }
+                            @media screen and (max-width: 600px) {
+                                font-size: 0.8rem;
+                            }
+                        }
+                    }
+                    .phone {
+                        user-select: text;                      
+                        a {
+                            color: $gold1;
+                            font-family: $font2;
+                            font-weight: 400;
+                            letter-spacing: 2px;
+                            text-align: center;
+                            text-transform: uppercase;
+                        }
+                        @media screen and (max-width: 560px) {
+                            font-size: 0.6rem;
+                        }
+                    }
+
+                }
+            }
+        }
+        .reservinfo {
+            background: $white1;
+            display: grid;
+            grid-template-rows: 20% 5% 150px 1fr;
+            justify-items: center;
+            align-items: center;
+            @media screen and (max-width: 560px) {
+                grid-template-rows: 12% 5% 10px 1fr;
+            }
+            @media screen and (max-width: 630px) {
+                grid-template-rows: 20% 5% 60px 1fr;
+                margin: 20 auto;
+            }
+            .italic {
+                color: $gold1;
+                font-family: $font1;
+                font-weight: normal;
+                font-size: 3rem;
+                align-self: end;
+                height: 50px;
+                text-transform: lowercase;
+                &::first-letter {
+                    text-transform: uppercase;
+                }
+                @media screen and (max-width: 560px) {
+                    font-size: 2rem;
+                }
+            }
+            h2 {
+                color: $black1;
+                font-family: $font2;
+                font-size: 2.3rem;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                @media screen and (max-width: 560px) {
+                    font-size: 0.6rem;
+                }
+            }
+            span {
+                img {
+                    @media screen and (max-width: 560px) {    
+                        width: 20px;
+                        height: 20px;                     
+                    }
+                }
+            }
+            form {
+                display: grid;
+                align-self: start;
+                grid-template-areas: 
+                "people date time"
+                "name tel mail"
+                ". btn .";
+                @media screen and (max-width: 560px) {
+                    grid-template-rows: repeat(4, 25%);
+                }
+                @media screen and (max-width: 630px) {
+                    height: 100%;
+                }
+                @media screen and (max-width: 1620px){
+                    grid-template-areas: 
+                    "people date"
+                    "time name"
+                    "tel mail"
+                    "btn btn";
+                    input[type="submit"]{
+                        margin: 0 auto;
+                        width: 30%;
+                    }
+                }
+                select {
+                    font-size: 1.10rem;
+                    padding: 10px;
+                    margin: 10px;
+                    background: none;
+                    border: none;
+                    border-bottom: 1px solid $grey1;
+                    cursor: pointer;
+                    &:focus-visible {
+                        outline: none;
+                    }
+                    @media screen and (max-width: 560px) {
+                        font-size: 0.65rem;
+                    }
+                    @media screen and (max-width: 630px) {
+                        width: 75%;
+                        justify-self: center;
+                    }
+                }
+                input {
+                    font-size: 1.10rem;
+                    margin: 10px;
+                    padding: 10px;
+                    background: none;
+                    border: none;
+                    border-bottom: 1px solid $grey1;
+                    cursor: text;
+                    @media screen and (max-width: 560px) {
+                        font-size: 0.7rem;
+                    }
+                    @media screen and (max-width: 630px) {
+                        width: 75%;
+                        justify-self: center;
+                    }
+                    &:hover {
+                        border-bottom: 1px solid #000;
+                    }
+                    &:focus-visible {
+                        outline: none;
+                    }
+                }
+                input[type="submit"] {
+                    margin-top: 50px;
+                    cursor: pointer;
+                    padding: 20px;
+                    background: #000;
+                    color: $white1;
+                    border-radius: 150px;
+                    @media screen and (max-width: 560px) {
+                        font-size: 0.35rem;
+                        height: 25px;
+                        width: 50px;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    @media screen and (max-width: 630px) {
+                        width: 25%;
+                        font-size: 0.7rem;
+                        margin: 5px;
+                    }
+                    &:hover {
+                        background: rgb(32, 32, 32);
+                        transform: scale(1.05);
+                    }
+                }
+            }
+            #people {
+                grid-area: people;
+            }
+            #date {
+                grid-area: date;
+            }
+            #time {
+                grid-area: time;
+            }
+            #name {
+                grid-area: name;
+            }
+            #tel {
+                grid-area: tel;
+            }
+            #mail {
+                grid-area: mail;
+            }
+            #btn {
+                grid-area: btn;
+            }
+        
+        }
+    }
+    .event-container {
         width: 100%;
-        background: rgb(217, 217, 217);
-    }
-    &:after {
-        content: '';
-        position: absolute;
-        left: 50%;
-        height: 100%;
-        width: 2px;
-        background: rgb(217, 217, 217);
-    }
-    .leftaside-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 45%;
-    }
-    .rightaside-container {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 45%;
-    }
-    .imaside-container {
-        width: 100%;
-        overflow: hidden;
-        img {
-            width: 100%;
-            opacity: 0;
+        height: 85%;
+        display: grid;
+        grid-template-rows: 10% 10% 10% 70%;
+        justify-items: center;
+        margin-top: 70px;
+        @media screen and (max-width: 630px) {
+            display: none;
         }
-        #pic02 {
+        .italic {
+            color: $gold1;
+            font-family: $font1;
+            font-weight: normal;
+            font-size: 3rem;
+            align-self: end;
+            height: 50px;
+            text-transform: lowercase;
+            &::first-letter {
+                text-transform: uppercase;
+            }
+        }
+        h2 {
+            color: $white1;
+            font-family: $font2;
+            font-size: 2.3rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        span {
+            margin-top: 50px;
+        }
+        .event-content {
+            overflow: hidden;
+            margin-top: 50px;
+            width: 65%;
+            height: 90%;
+            display: grid;
+            grid-template-columns: 65% 35%;
+            grid-template-areas: 
+            "eventcard1 eventcard3"
+            "eventcard2 eventcard3";
+            #eventcard1 {
+                position: relative;
+                grid-area: eventcard1;
+                margin: 0 20px 10px 0 ;
+                left: -700px;
+                transition: .8s ease-in-out;
+            }
+            #eventcard2 {
+                position: relative;
+                grid-area: eventcard2;
+                margin: 10px 20px 0 0;
+                left: -700px;
+                transition: .8s ease-in-out;
+            }
+            #eventcard3 {
+                position: relative;
+                bottom: -400px;
+                grid-area: eventcard3;
+                transition: .8s ease-in-out;
+            }
+            .animate {
+                translate: 700px;
+            }
+            .animate2 {
+                transform: translateY(-400px);
+            }
+            .eventcard{
+                display: grid;
+                grid-template-columns: 30% 70%;
+                #ed1 {
+                    background: url("../img/event-01.jpg") center/cover;
+                }
+                #ed2 {
+                    background: url("../img/event-02.jpg") center/cover;
+                }
+                .eventdate-container {
+                    padding: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .eventdate {
+                        width: 50%;
+                        height: 50%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        background: rgb(37, 37, 37);
+                        h3 {
+                            color: $white1;
+                            font-family: $font2;
+                            font-size: 1.2rem;
+                        }
+                        h4 {
+                            color: $white1;
+                            font-family: $font3;
+                            font-weight: 400;
+                            &::first-letter {
+                            text-transform: uppercase;
+                            }
+                        }
+                    }
+                }
+                .eventinfo {
+                    display: grid;
+                    grid-template-rows: 33% 33% 34%;
+                    align-items: center;
+                    padding: 20px;
+                    background: $white1;
+                    h3 {
+                        letter-spacing: 2px;
+                        font-family: $font3;
+                        font-weight: normal;
+                    }
+                    p {
+                        font-family: $font3;
+                        color: $grey1;
+                    }
+                    a {
+                        position: relative;
+                        height: 50%;
+                        width: 22.5%;
+                        font-size: 0.8rem;
+                        font-weight: 600;
+                        font-family: $font3;
+                        color: $black1;
+                        letter-spacing: 2px;
+                        text-transform: uppercase;
+                        cursor: pointer;
+                        @media screen and (max-width: 1682px) {
+                            width: 23%;
+                        }
+                        &:after {
+                            position: absolute;
+                            content: "";
+                            width: 0;
+                            height: 2px;
+                            background: $black1;
+                            bottom: 0px;
+                            left: 0;
+                            transition: .8s ease-in-out;
+                        }
+                        &:hover:after {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .event_card {
+                background: url("../img/event-03.jpg") center/cover;
+                padding: 20px;
+                .container {
+                    display: grid;
+                    grid-template-rows: 30% 70%;
+                    justify-items: center;
+                    background: $white1;
+                    height: 100%;
+                    .eventdate {
+                        width: 25%;
+                        height: 70%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        background: rgb(37, 37, 37);
+                        h3 {
+                            color: $white1;
+                            font-family: $font2;
+                            font-size: 1.2rem;
+                        }
+                        h4 {
+                            color: $white1;
+                            font-family: $font3;
+                            font-weight: 400;
+                            &::first-letter {
+                            text-transform: uppercase;
+                            }
+                        }
+                    }
+                    .eventinfo {
+                        display: grid;
+                        grid-template-rows: 40% 20% 40%;
+                        align-items: center;
+                        justify-items: center;
+                        h3 {
+                            letter-spacing: 2px;
+                            text-align: center;
+                            font-family: $font3;
+                            font-weight: normal;
+                        }
+                        p {
+                            margin-bottom: 50px;
+                            font-size: 0.8rem;
+                            font-family: $font3;
+                            color: $grey1;
+                        }
+                        a {
+                            position: relative;
+                            height: 25%;
+                            font-size: 0.8rem;
+                            font-weight: 600;
+                            font-family: $font3;
+                            color: $black1;
+                            letter-spacing: 2px;
+                            text-transform: uppercase;
+                            cursor: pointer;
+                            &:after {
+                                position: absolute;
+                                content: "";
+                                width: 0;
+                                height: 2px;
+                                background: $black1;
+                                bottom: 0px;
+                                left: 0;
+                                transition: .8s ease-in-out;
+                            }
+                            &:hover:after {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+    .headchef-container {
+        // background: url("../img/bg-menu-01.jpg"),rgb(33,32,30);
+        // background-repeat: no-repeat, no-repeat;
+        // background-position: bottom, top;
+        margin: 180px auto 0;
+        .headchef-comments {
+            margin: 0 auto;
+            width: 65%;
+            min-height: 400px;
+            background: $white1;
             position: relative;
-            left: -600px;
-            transition: opacity 1s , transform 3s;
+            display: grid;
+            grid-template-rows: 70% 15% 15%;
+            justify-items: center;
+            .imgcontainer {
+                position: absolute;
+                top: -35px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 75px;
+                height: 75px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                }
+            }
+            p {
+                font-family: $font3;
+                font-weight: 600;
+                width: 80%;
+                text-align: center;
+                align-self: center;
+                line-height: 2;
+                margin-top: 50px;
+                @media screen and (max-width: 630px) {
+                    font-size: 0.8rem;
+                }
+            }
+            h3 {
+                font-family: $font3;
+                font-weight: 600;
+                font-size: 1.4rem;
+                align-self: center;
+            }
+            h4 {
+                color: $gold1;
+                font-family: $font3;
+                font-weight: normal;
+                font-size: 1.1rem;
+            }
         }
-        #pic03 {
-            position: relative;
-            right: -600px;
-            transition: opacity 1s , transform 3s;
-        }
-        .animate {
-            transform: translateX(600px);
-            opacity: 1;
-        }
-        .animate2 {
-            transform: translateX(-600px);
-            opacity: 1;
-        }
-    }
-    .dateaside {
-        font-size: 0.8rem;
-    }
-    h3 {
-        font-size: 1.4rem;
-        text-transform: uppercase;
-        font-family: $font1;
-        letter-spacing: 2px;
-        line-height: 2;
-        text-align: center;
-        width: 45%;
-        margin: 30px auto;
-    }
-    #lorem {
-        font-size: 1.2rem;
-        line-height: 2;
-        margin: 30px auto;
-    }
-    .visible {
-        opacity: 1;
     }
 }
