@@ -1,14 +1,17 @@
 @font-face {
     font-family: "allura";
     src: url(../fonts/Allura-Regular.ttf);
+    font-display: fallback;
 }
 @font-face {
     font-family: "poppins";
     src: url(../fonts/Poppins-Medium.ttf);
+    font-display: fallback;
 }
 @font-face {
     font-family: "roboto";
     src: url(../fonts/Roboto-Light.ttf);
+    font-display: fallback;
 }
 
 $font1: "allura", sans-serif;
@@ -31,7 +34,6 @@ $grey1: rgba(172, 172, 172, 0.916);
 }
 body {
     position: relative;
-    font-display: auto;
     min-height: 100vh;
 
     #loader {
