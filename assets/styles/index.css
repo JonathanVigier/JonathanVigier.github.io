@@ -27,7 +27,6 @@
 
 body {
   position: relative;
-  min-height: 100vh;
 }
 body #loader {
   display: flex;
@@ -40,7 +39,6 @@ body #loader {
   height: 100vh;
   width: 100%;
   z-index: 10;
-  overflow: hidden;
 }
 body #loader .lds-spinner {
   color: official;
@@ -140,6 +138,9 @@ body #loader .lds-spinner div:nth-child(12) {
   100% {
     opacity: 0;
   }
+}
+body #site {
+  display: none;
 }
 
 li {
@@ -1292,4 +1293,91 @@ aside .headchef-container .headchef-comments h4 {
   font-family: "roboto", serif;
   font-weight: normal;
   font-size: 1.1rem;
+}
+
+footer {
+  min-height: 35vh;
+  background: url("../img/bg-footer.jpg") center/cover;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+footer .leftpart {
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  grid-template-columns: 1fr;
+  justify-self: end;
+  align-self: center;
+  width: 65%;
+}
+footer .leftpart h3 {
+  color: #A67245;
+  font-family: "allura", sans-serif;
+  font-size: 2.5rem;
+}
+footer .leftpart h3:first-letter {
+  text-transform: uppercase;
+}
+footer .leftpart p {
+  color: rgb(242, 242, 242);
+  padding: 10px 0;
+  line-height: 2;
+  font-family: "roboto", serif;
+  font-size: 1.1rem;
+}
+footer .rightpart {
+  display: grid;
+  grid-template-rows: 101px 75px;
+  grid-template-columns: 1fr;
+  align-self: center;
+  margin-left: 40px;
+  width: 65%;
+}
+footer .rightpart h3 {
+  color: rgb(242, 242, 242);
+  text-transform: uppercase;
+  font-family: "poppins", serif;
+  font-size: 0.9rem;
+}
+footer .rightpart .newsletter h3 {
+  padding-bottom: 15px;
+}
+footer .rightpart .newsletter input {
+  background: none;
+  padding: 5px;
+  border: 1px solid rgba(172, 172, 172, 0.916);
+  color: rgb(242, 242, 242);
+}
+footer .rightpart .newsletter input:focus-visible {
+  outline: none;
+}
+footer .rightpart .newsletter input:hover {
+  border: 1px solid #A67245;
+}
+footer .rightpart .social {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 100px 250px;
+}
+footer .rightpart .social .socialicons {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(4, 1fr);
+}
+footer .rightpart .social .socialicons li a {
+  color: rgba(172, 172, 172, 0.916);
+}
+footer .rightpart .social .socialicons li:hover {
+  transform: scale(1.3);
+}
+footer .rightpart .social .socialicons li #fb:hover {
+  color: #3b5998;
+}
+footer .rightpart .social .socialicons li #tw:hover {
+  color: #1DA1F2;
+}
+footer .rightpart .social .socialicons li #it:hover {
+  color: #C32AA3;
+}
+footer .rightpart .social .socialicons li #pint:hover {
+  color: rgb(189, 8, 28);
 }/*# sourceMappingURL=index.css.map */
