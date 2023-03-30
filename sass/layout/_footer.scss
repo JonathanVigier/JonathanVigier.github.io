@@ -1,0 +1,59 @@
+footer {
+    height: 197px;
+    padding: 22px 0 33px 25px;
+    background: #353535;
+
+    h4 {
+        font-family: $title;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+        color: white;
+        margin: 0 0 16px 0;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+
+        li {
+            list-style-type: none;
+
+            a,
+            a:visited {
+                @include button-text;
+                color: white !important;
+            }
+
+            i {
+                font-family: serif;
+                font-size: 12px;
+                width: 12px;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+/*  Media query Tablette (max-width: 768px) */
+
+@media screen and (min-width: 768px) {
+    footer {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        padding: 22px 25px 33px 0;
+        gap: 30px;
+
+        h4 {
+            margin: 0;
+        }
+
+        ul {
+            flex-direction: row;
+            gap: 20px;
+        }
+    }
+}

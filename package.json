@@ -1,0 +1,18 @@
+{
+  "name": "projet_4_ohmyfood",
+  "version": "1.0.0",
+  "description": "projet 4 de la formation Intégrateur web OpenClassrooms",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonathanVigier/Projet_4_OhMyFood.git"
+  },
+  "author": "Jonathan Vigier",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.60.0"
+  }
+}
