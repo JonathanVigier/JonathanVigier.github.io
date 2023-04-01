@@ -10,6 +10,8 @@ body {
   max-width: 1440px;
   min-height: 100vh;
   margin: 0 auto;
+  overflow: hidden;
+  animation: bodyLoadingAnim 5.5s ease forwards;
 }
 
 a,
@@ -18,6 +20,11 @@ a:visited {
   text-decoration: none;
 }
 
+@keyframes bodyLoadingAnim {
+  to {
+    overflow: visible;
+  }
+}
 @font-face {
   font-family: "title";
   src: url("../assets/fonts/Shrikhand/Shrikhand-Regular.ttf");
@@ -37,6 +44,93 @@ a:visited {
 @font-face {
   font-family: "text-700";
   src: url("../assets/fonts/Roboto/Roboto-Bold.ttf");
+}
+.loader {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  z-index: 10;
+}
+.loader::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 3px;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%);
+  background: black;
+  animation: lineAnim 1.5s ease-in forwards;
+}
+.loader svg path {
+  stroke-dasharray: 180px;
+  stroke-dashoffset: 180px;
+  animation: pathAnim 2.5s forwards;
+}
+.loader svg path:nth-child(0n+3) {
+  stroke: #9356DC;
+  animation: pathAnim 1.5s forwards;
+}
+.loader p {
+  position: relative;
+  opacity: 0;
+  font-family: "text-500", serif;
+  animation: textLoaderAnim 2s forwards;
+}
+
+/* Media query Tablet (min-width: 768px) */
+@media screen and (min-width: 768px) {
+  .loader {
+    gap: 15px;
+  }
+  .loader::after {
+    top: 70%;
+  }
+  .loader svg {
+    height: 20vh;
+  }
+  .loader p {
+    font-size: 26px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .loader::after {
+    top: 75%;
+  }
+  .loader svg {
+    height: 35vh;
+  }
+  .loader p {
+    font-size: 42px;
+  }
+}
+@keyframes loaderAnim {
+  to {
+    visibility: collapse;
+    opacity: 0;
+  }
+}
+@keyframes pathAnim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes textLoaderAnim {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes lineAnim {
+  to {
+    width: 65vw;
+  }
 }
 header {
   position: relative;
@@ -94,7 +188,7 @@ header nav img {
   align-self: end;
   width: 73%;
   height: 68px;
-  font-family: "Schrickhand", cursive;
+  font-family: "title", cursive;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
@@ -207,9 +301,6 @@ header nav img {
   .functioning {
     height: auto;
   }
-  .functioning h2 {
-    margin-left: 160px;
-  }
   .functioning .functioning-content {
     flex-direction: row;
     justify-content: center;
@@ -217,6 +308,11 @@ header nav img {
   }
   .functioning .functioning-content button {
     width: 322px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .functioning h2 {
+    margin-left: 10rem;
   }
 }
 .restaurants {
@@ -274,13 +370,10 @@ header nav img {
   overflow: hidden;
 }
 .restaurants .restaurants-content .card .img-container img {
-  position: absolute;
-  bottom: 0;
   width: 100%;
+  height: 100%;
   object-fit: cover;
-}
-.restaurants .restaurants-content .card .img-container #img-2 {
-  bottom: -58%;
+  object-position: 0% 60%;
 }
 .restaurants .restaurants-content .card .card-content {
   display: flex;
@@ -328,28 +421,29 @@ header nav img {
   transform: scale(0.86, 0.9);
 }
 
-/*  Media query Tablette (max-width: 768px) */
+/*  Media query Tablette (min-width: 768px) */
 @media screen and (min-width: 768px) {
   .restaurants {
     padding: 54px 20px 64px 20px;
   }
   .restaurants .restaurants-content {
     display: grid;
-    gap: 50px;
+    justify-items: center;
+    row-gap: 50px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
+  }
+  .restaurants .restaurants-content .card:nth-child(0n+3) .img-container img, .restaurants .restaurants-content .card:nth-child(0n+4) .img-container img {
+    object-position: 0% 80%;
   }
 }
-/*  Media query Desktop (min-width: 1440px) */
+/* Media query Desktop (min-width: 1440px) */
 @media screen and (min-width: 1440px) {
-  .restaurants {
-    padding: 54px 20px 64px 170px;
+  .restaurants h2 {
+    padding: 0 0 0 10rem;
   }
   .restaurants .restaurants-content {
-    display: grid;
-    gap: 50px;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    padding: 0 180px 0 180px;
   }
 }
 footer {
@@ -614,7 +708,7 @@ footer ul li i {
 .menu .desserts .menu-item-container .menu-item-starters span,
 .menu .desserts .menu-item-container .menu-item-main-courses span,
 .menu .desserts .menu-item-container .menu-item-desserts span {
-  font-family: "Schickhand", cursive;
+  font-family: "title", cursive;
   font-weight: 700;
   font-size: 15px;
   line-height: 18px;
